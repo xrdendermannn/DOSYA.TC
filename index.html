@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="tr">
+
+<!-- Mirrored from s5.dosya.tc/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Apr 2021 11:12:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-9" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+
+<title>Dosya.tc - Ücretsiz, Hızlı ve Kolay Dosya Paylaşımı - Dosya Upload</title>
+<META NAME="description" CONTENT="Dosya.tc, dosya yükleme ve paylaşım platformudur. Her türlü veriyi (dosya, resim, müzik, video vb.) saklayabilir ve paylaşabilirsiniz. Tamamen ücretsiz, üyeliğe gerek yok. Hiçbir limit yok. Dosya Upload. Dosya Paylaş. Dosya Yükle">
+<META NAME="keywords" CONTENT="dosya, dosya yükle, dosya paylaş, dosya upload, dosya indir, dosya gönder, upload, ücretsiz dosya paylaşımı, upload sitesi, file, file upload, file download, free file hosting, file hosting, file share">
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<link href="style/bootstrap.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="alternate" href="https://www.dosya.tc/" hreflang="tr-tr" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60205436-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+
+
+
+
+<div id="container">
+<div id="tasiyici">
+<div id="header">
+<a href="https://www.dosya.tc/" title="Dosya Yükle"><img src="images/logo.png" width="191" height="53" alt="Dosya.tc"></a>
+<select class="sel1" onchange="location = this.options[this.selectedIndex].value;">
+<option>...</option>
+<option value="index.html">Dosya Upload</option>
+<option value="indexfe9c.html?page=faq">Site Hakkında</option>
+<option value="indexc5c8.html?page=tos">Kullanım Şartları</option>
+<option value="iletisim.html">Bize Ulaşın</option>
+<option value="https://www.dosya.tc/uye.php">Üye Girişi</option>
+</select>
+
+<a href="https://www.dosya.tc/uye.php"><img src="images/uye-girisi.png" alt="Üye girişi" class="uye-girisi"></a>
+
+
+<div class="menu">
+<ul>
+<li><a href=index.html>Dosya Upload</a></li>
+<li><a href="indexfe9c.html?page=faq">Site Hakkında</a></li>
+<li><a href="indexc5c8.html?page=tos">Kullanım Şartları</a></li>
+<li><a href="iletisim.html">Bize Ulaşın</a></li>
+</ul>
+</div>
+</div>
+<div id="main"><img src="images/dosya-yukleme.png" width="960" height="74" alt="Dosya Yükle ve Paylaş" class="img-responsive" id="ustimg">
+
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="u.css">
+		<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="jquery.blockUI.js"></script>		<script type="text/javascript" src="u_file_upload.js"></script>
+		<script type="text/javascript">
+			var JQ = jQuery.noConflict();
+
+			Dosyatc.path_to_link_script = "u_link_upload.html";
+			Dosyatc.path_to_set_progress_script = "u_set_progress.html";
+			Dosyatc.path_to_get_progress_script = "u_get_progress.html";
+			Dosyatc.path_to_upload_script = "cgi-bin/u_upload.html";
+			Dosyatc.check_allow_extensions_on_client = 0;
+			Dosyatc.check_disallow_extensions_on_client = 1;
+						Dosyatc.disallow_extensions = /(sh|php|php3|php4|php5|py|shtml|stm|shtm|phtml|html|htm|js|jsp|asp|aspx|cgi|pl|plx|htaccess|htpasswd|so|o|a|bin|elf|rpm|deb|gz|ini)$/i;
+			Dosyatc.check_file_name_format = 0;
+															Dosyatc.check_null_file_count = 1;
+			Dosyatc.check_duplicate_file_count = 1;
+			Dosyatc.max_upload_slots = 5;
+			Dosyatc.cedric_progress_bar = 0;
+			Dosyatc.cedric_hold_to_sync = 0;
+			Dosyatc.bucket_progress_bar = 0;
+			Dosyatc.progress_bar_width = 400;
+			Dosyatc.show_percent_complete = 1;
+			Dosyatc.block_ui_enabled = 1;
+			Dosyatc.show_files_uploaded = 1;
+			Dosyatc.show_current_position = 1;
+			Dosyatc.show_current_file = 0;
+			Dosyatc.show_elapsed_time = 1;
+			Dosyatc.show_est_time_left = 1;
+			Dosyatc.show_est_speed = 1;
+
+			JQ(document).ready(function(){
+				Dosyatc.resetFileUploadPage();
+				JQ("#reset_button").bind("click", function(e){ Dosyatc.resetFileUploadPage(); });
+				JQ("#progress_bar_background").css("width", Dosyatc.progress_bar_width);
+
+				if(Dosyatc.show_files_uploaded || Dosyatc.show_current_position || Dosyatc.show_elapsed_time || Dosyatc.show_est_time_left || Dosyatc.show_est_speed){
+					JQ("#upload_stats_toggle").bind("click", function(e){ Dosyatc.toggleUploadStats(); });
+					JQ("#upload_stats_toggle").html("[+]");
+					JQ("#upload_stats_toggle").attr("title", "Toggle Upload Statistics");
+				}
+			});
+		</script>
+
+
+<br><br>
+		<div id="main_container" align="center">
+					<div id="u_alert" align="center"></div>
+
+
+
+			<!-- Progress Bar -->
+			<div id="progress_bar_container">
+				<div id="upload_stats_toggle">&nbsp;</div>
+				<div id="progress_bar_background" class="progress">
+					<div id="progress_bar" class="progress-bar"></div>
+				</div>
+				<div id="percent_complete">&nbsp;</div>
+			</div>
+
+			<br clear="all">
+
+
+
+
+			<!-- Upload Stats -->
+							<div id="upload_stats_container">
+										<div class='upload_stats_label'>&nbsp;Yüklenen Dosyalar:</div>
+					<div class='upload_stats_data'><span id="total_uploads">0</span> den <span id="files_uploaded">0</span></div>
+										<div class='upload_stats_label'>&nbsp;Yüklenen KB:</div>
+					<div class='upload_stats_data'><span id="current_position">0</span> / <span id="total_kbytes">0</span> KB</div>
+										<div class='upload_stats_label'>&nbsp;Geçen Süre:</div>
+					<div class='upload_stats_data'><span id="elapsed_time">0</span></div>
+										<div class='upload_stats_label'>&nbsp;Kalan Süre:</div>
+					<div class='upload_stats_data'><span id="est_time_left">0</span></div>
+										<div class='upload_stats_label'>&nbsp;Yüklenme hızı:</div>
+					<div class='upload_stats_data'><span id="est_speed">0</span> KB/s.</div>
+									</div>
+				<br clear="all">
+			
+
+ 
+
+
+			<!-- Container for upload iframe -->
+			<div id="upload_container"></div>
+
+	
+
+
+
+			<!-- Start Upload Form -->
+
+			<form id="u_upload_form" name="u_upload_form" method="post" enctype="multipart/form-data" action="#" onSubmit="return Dosyatc.linkUpload();">
+
+				<noscript><span class="ubrError">HATA</span>: Javascript etkin değil.<br><br></noscript>
+
+
+
+
+
+
+
+				<div id="upload_slots_container"></div>
+				<div id="upload_form_values_container" class="kayit">
+				</div>
+
+
+
+
+
+
+
+
+<div class="yukle">
+                      
+				<div id="file_picker_container" class="text1"></div>
+
+<input type="button" id="reset_button" name="reset_button" class="yukbuton1" value="Temizle">
+
+<input type="submit" id="upload_button" name="upload_button" class="yukbuton2" value="Yükle">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</form>
+	
+	
+
+
+
+
+</div>
+
+<br><br><br>
+
+<div class="kutular">
+<div class="box">
+<img src="images/icon1.png" alt="Dosya Yükle">
+<h2>Neden Dosya.tc?</h2>
+<span>Dosya.tc ücretsiz,hızlı ve kullanımı kolay bir dosya paylaşım servisidir. Premium üyelik, aylık ödeme gibi ücretler yoktur.</span>
+</div>
+
+<div class="box">
+<img src="images/icon2.png" alt="Dosya Upload">
+<h2>Sınırsız Up/Down</h2>
+<span>Hiçbir süre ve hit limiti olmadan sınırsızca dosya yükleyebilir ve indirebilirsiniz.</span>
+</div>
+
+<div class="box">
+<img src="images/icon3.png" alt="Dosyalarınız Güvende">
+<h2>Dosyalar Güvende</h2>
+<span>
+Dosyalarınız illegal olmadığı müddetçe sunucularımızdan silinmeyecektir.
+</span>
+</div>
+
+<div class="box">
+<img src="images/icon4.png" alt="Üyeliğe gerek yok">
+<h2>Üyeliğe gerek yok</h2>
+<span>
+Sitemizi kullanmanız için üye olma şartı yoktur ancak üye olarak linklerinizi saklayabilirsiniz.
+Sosyal medya hesaplarınız ile sitemize giriş yapabilirsiniz.
+</span>
+</div>
+</div>
+<span class="alt-duyuru">
+Altyapımızı yenilememizle birlikte dosya boyutunu 1 GB'a çıkardık. Artık tek seferde 1 GB'a kadar dosya yükleyebilirsiniz.
+<br>
+2006 yılından beri hizmet vermeye devam eden Dosya.tc, yenilenen tasarımı ile hizmet vermeye devam ediyor.
+
+<br><br>
+<center>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https://www.dosya.tc/&amp;layout=button&amp;size=small&amp;appId=239138059948692&amp;width=61&amp;height=20" width="61" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="https://www.dosya.tc/" data-show-count="false">Tweet</a><script async src="../platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</center>
+</span>
+
+
+<br><br><br>
+<div id="footer">
+<a href="https://www.facebook.com/Dosya.tc" class="social"><img src="images/footer-icon1.png" alt="Facebook"></a>
+<a href="https://twitter.com/Dosyatc" class="social"><img src="images/footer-icon2.png" alt="Twitter"></a>
+<a href="https://www.google.com/+DosyaTcsitesi" class="social"><img src="images/footer-icon3.png" alt="Google+"></a>
+
+
+
+
+
+<span>Copyright Dosya.tc © 2006-2020. Her hakkı saklıdır...</span>
+
+
+
+
+<a href="https://www.dosya.tc/" title="Dosya Upload">
+<img src="images/logo.png" alt="Dosya.tc" class="logo" width="120" height="33">
+</a>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+<!-- Mirrored from s5.dosya.tc/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Apr 2021 11:12:55 GMT -->
+</html>

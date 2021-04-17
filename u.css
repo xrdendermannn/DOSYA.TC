@@ -1,0 +1,176 @@
+#u_alert {
+	font: 18px Arial;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.uError {
+	color: red;
+}
+
+.uWarning{
+	color: orange;
+}
+
+#upload_container{
+	display:none;
+}
+
+
+
+
+
+
+/* PROGRESS BAR */
+#progress_bar_container{
+	width:480px;
+	margin:auto;
+	text-align:center;
+	display:none;
+	height:22px;
+     font: 24px Arial;
+}
+
+#upload_stats_toggle{
+	float:left;
+	width:40px;
+	height:20px;
+	font: 14px Arial;
+	text-align:center;
+	padding-top: 3px;
+	cursor:pointer;
+}
+
+#progress_bar_background{
+     float:left;
+	height:20px;
+	width:400px;
+	border:1px solid #428bca;
+}
+
+#progress_bar{
+     float:left;
+	background-color: #428bca;
+	height:20px;
+	width:0px;
+     font: 24px Arial;
+
+}
+
+#percent_complete{
+	float:left;
+	width:40px;
+	height:20px;
+	font: 14px Arial;
+	text-align:center;
+	padding-top: 3px;
+}
+/* PROGRESS BAR */
+
+/* UPLOAD STATISTICS */
+#upload_stats_container{
+	font: 14px Arial;
+	background-color:#FFFFFF;
+	width:300px;
+	margin:auto;
+	display:none;
+	border-top:1px solid #428bca;
+	margin-bottom: 5px;
+     padding-bottom: 5px;
+}
+
+.upload_stats_label{
+	width: 150px;
+	height: 20px;
+	text-align: left;
+	float:left;
+	background-color:#FFFFFF;
+	border-bottom:1px solid #428bca;
+	border-left:1px solid #428bca;
+	padding-top: 3px;
+}
+
+.upload_stats_data{
+	width: 150px;
+	height: 20px;
+	text-align: center;
+	float:left;
+	background-color:#F8F8F8;
+	border-bottom:1px solid #428bca;
+	border-right:1px solid #428bca;
+	border-left:1px solid #428bca;
+	padding-top: 3px;
+}
+/* UPLOAD STATISTICS */
+
+
+/* UPLOAD SLOTS */
+#upload_slots_container{
+	display:none;
+	margin:auto;
+	text-align:center;
+	font: 14px Arial;
+	width:400px;
+	border-top:1px solid #428bca;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#upload_form_values_container{
+	margin:auto;
+	text-align:center;
+	font: 14px Arial;
+}
+
+.upfile_label{
+	height:24px;
+	background:#F9F9F9;
+}
+
+.upfile_name {
+	width:371px;
+	height:20px;
+	float: left;
+	border-bottom:1px solid #428bca;
+	border-left:1px solid #428bca;
+	padding-top: 3px;
+}
+
+.upfile_remove{
+	float:left;
+	width:29px;
+	height:20px;
+	padding-top: 3px;
+	cursor:pointer;
+	border-left:1px solid #428bca;
+	border-right:1px solid #428bca;
+	border-bottom:1px solid #428bca;
+}
+/* UPLOAD SLOTS */
+
+/* UPLOAD BUTTONS */
+#upload_buttons_container{
+	width:500px;
+	height:20px;
+	margin:auto;
+	text-align:center;
+	margin-top: 10px;
+}
+
+#reset_button{
+
+float:center;
+
+}
+
+#upload_button{
+
+float:center;
+
+}
+/* UPLOAD BUTTONS */
+
+
+
+
+
